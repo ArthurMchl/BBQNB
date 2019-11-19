@@ -1,9 +1,14 @@
-<h1>Our Barbecues</h1>
+<h1 class ="titre">List of Barbecues at <%= params[:query].downcase.capitalize %></h1>
 
-<% @barbecues.each do |barbecue| %>
-    <h2> <%= link_to barbecue.name, barbecue_path(barbecue)%></h2>
-      <%= link_to barbecue_path(barbecue), method: :delete, data: { confirm: "Are you sure?" } do %>
-      <i class="fas fa-trash" id="trash"></i>
+
+<div class="container">
+  <div class="row">
+    <% @barbecues.each do |barbecue| %>
+      <div class="col-sm-12 col-md-4">
+        <%= render "shared/card", barbecue: barbecue %>
+      </div>
       <% end %>
-       <% end %>
-<%= console %>
+    </div>
+  </div>
+
+
