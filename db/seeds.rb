@@ -53,7 +53,11 @@ barbecue_mick_un = Barbecue.create(
 barbecue_mick_deux = Barbecue.create(
   {
     name:         'BarbecueQuiCrame',
-    description:  'blalalllvldflfdslzflfelsf',
+    description:  "Stand 4 pieds avec système de démontage facile, idéal pour les espaces types balcon,
+                  terrasse
+                  Barbecue électrique avec grille de cuisson haute résistance en fonte d'acier émaillée,
+                  bac de récupération des graisses, molette de réglage de la température, larges poignées
+                  pour une manipulation aisée, cordon longeur : 1,80 m",
     category:     'charbon',
     price:        500,
     location:     'Lens',

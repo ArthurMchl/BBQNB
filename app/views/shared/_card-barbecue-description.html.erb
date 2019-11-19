@@ -1,23 +1,15 @@
 <div class="card-rental">
-  <h3 class="card-name-barbecue">Barbeuc 3000 ++ sup3r</h3>
+  <h3 class="card-name-barbecue"><%= @barbecue.name %></h3>
   <div class="card-rental-description">
     <div class="card-rental-photo">
+      <%= cl_image_tag @barbecue.photo%>
     </div>
     <div class="card-information">
       <div class="card-rental-info">
         <ul>
-          <li><strong>Description:</strong> JBarbecue Weber à charbon Master-Touch GBS Ø57 cm.
-            Cuve et couvercle en acier émaillé.
-            Grille de cuisson GBS articulée en acier chromé pour ajouter facilement des briquettes lors de la cu
-            isson.
-            Grille foyère en acier.
-            Pieds avec fixations clipsées.
-            Poignées en nylon renforcées à la fibre de verre avec crochets porte-ustensiles.
-            Porte-couvercle intégré pour maintenir le couvercle lors de son ouverture.
-            Clapets d'aération en aluminium avec poignée à isolation thermique.
-          Cendrier amovible en acier inoxydable...</li>
-          <li><strong>Category:</strong> Charbon</li>
-          <li><strong>Location:</strong> Lille</li>
+          <li><strong>Description:</strong> <%= @barbecue.description %></li>
+          <li><strong>Category:</strong> <%= @barbecue.category %></li>
+          <li><strong>Location:</strong> <%= @barbecue.location %></li>
         </ul>
       </div>
       <div class="card-rental-rented">
@@ -27,6 +19,6 @@
     </div>
   </div>
   <div class="card-rental-owner-information">
-    <p><em>nom du propriétaire</em></p>
+    <p><em><%= @barbecue.user.email %></em></p>
   </div>
 </div>
