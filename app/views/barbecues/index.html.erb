@@ -1,2 +1,9 @@
-<h1>Barbecues#index</h1>
-<p>Find me in app/views/barbecues/index.html.erb</p>
+<h1>Our Barbecues</h1>
+
+<% @barbecues.each do |barbecue| %>
+    <h2> <%= link_to barbecue.name, barbecue_path(barbecue)%></h2>
+      <%= link_to barbecue_path(barbecue), method: :delete, data: { confirm: "Are you sure?" } do %>
+      <i class="fas fa-trash" id="trash"></i>
+      <% end %>
+       <% end %>
+<%= console %>
