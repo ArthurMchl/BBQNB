@@ -13,7 +13,10 @@ class BarbecuesController < ApplicationController
 
   def create
     @barbecue = Barbecue.new(barbecue_params)
+
     if @barbecue.save
+      p "-------------------------------------------ok"
+      p @barbecue
       redirect_to barbecue_path(@barbecue)
     else
       render :new
