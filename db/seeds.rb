@@ -8,16 +8,16 @@ puts "---- Seed model User (20 instances) ----"
 
 micka = User.create(
  {
-  email: "mika@gmail.com",
-  password: "azerty"
+  email: 'mika@gmail.com',
+  password: 'azerty'
  }
  )
 
 
  pierre = User.create(
  {
-   email: "pierre@gmail.com",
-  password: "azerty"
+   email: 'pierre@gmail.com',
+  password: 'azerty'
  }
  )
 
