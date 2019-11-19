@@ -2,8 +2,8 @@
   <h3 class="card-name-barbecue"><%= @barbecue.name %></h3>
   <div class="card-rental-description">
     <div class="card-rental-photo">
-      <%= cl_image_tag @barbecue.photo%>
-    </div>
+<!--       cl_image_tag @barbecue.photo
+ -->    </div>
     <div class="card-information">
       <div class="card-rental-info">
         <ul>
@@ -14,7 +14,7 @@
       </div>
       <div class="card-rental-rented">
         <%= image_tag('saucisse.png', size: "60x180" ) %>
-        <a href="#" class="btn btn-warning">Grill me plz! :(</a>
+        <%= link_to 'Grill me plz!',new_barbecue_rental_path(@barbecue) ,class: "btn btn-warning"%>
       </div>
     </div>
   </div>
