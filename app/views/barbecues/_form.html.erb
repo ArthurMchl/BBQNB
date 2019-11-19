@@ -1,8 +1,14 @@
-<%= simple_form_for(@barbecue) do |f| %>
-  <div>
-    <%= f.input :name %>
-  </div>
+  <%= simple_form_for(@barbecue) do |f| %>
+   <div>
+     <%= f.input :name, label:'Nom' %>
+     <%= f.input :description %>
+     <%= f.input :price, as: :integer, label: 'Prix de location' %>
+     <%= f.input :location, label: 'Adresse' %>
+     <%= f.input :category, collection: ["gaz", "electrique", "charbon", "autre"], label:'Type de BBQ' %>
+     <%= f.input :photo %>
+     <%= f.input :photo_cache, as: :hidden %>
+   </div>
 
-  <%= f.submit %>
-<% end %>
+   <%= f.submit%>
+  <% end %>
 
