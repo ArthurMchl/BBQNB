@@ -1,4 +1,9 @@
-<h1 class ="titre">List of Barbecues at <%= params[:query].downcase.capitalize %></h1>
+<h1 class ="titre">
+  List of Barbecues
+  <% if params[:query].present?  %>
+    at <%= params[:query].downcase.capitalize %>
+  <% end %>
+</h1>
 
 
 <div class="container">
