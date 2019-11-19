@@ -1,0 +1,14 @@
+body {
+  position:relative;
+}
+
+.img-saucisse {
+  position: absolute;
+  bottom:0px;
+  left: -80px;
+  background-image: asset-url('saucisse_2.png');
+  background-size: contain;
+background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+}
