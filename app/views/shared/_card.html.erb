@@ -1,13 +1,11 @@
-<!--  <div class="card-trip">
-  <%=image_tag cocktail.url  %>
+<div class="card-trip">
+  <img src= "https://n2k3i5s6.stackpathcdn.com/wp-content/uploads/2019/07/barbecue-star-wars-114-1140x445.jpg" />
   <div class="card-trip-infos">
     <div>
-  <h2> <%= link_to cocktail.name, cocktail_path(cocktail)%></h2>
-      <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
-      <i class="fas fa-trash" id="trash"></i>
-      <% end %>
+  <h2> <%= link_to barbecue.name, barbecue_path(barbecue)%></h2>
     </div>
-    <h2 class="card-trip-pricing">£99.99</h2>
+    <h2 class="card-trip-pricing">
+    <%= barbecue.price  %> €
+    </h2>
   </div>
 </div>
- --> -->
