@@ -3,4 +3,5 @@ class Barbecue < ApplicationRecord
   belongs_to :user
   validates :name, :description, :price, :location, presence: true
   validates :category, inclusion: { in: %w[gaz electrique charbon autre] }
+  mount_uploader :photo, PhotoUploader
 end
