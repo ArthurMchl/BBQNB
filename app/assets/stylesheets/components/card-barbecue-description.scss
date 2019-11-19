@@ -10,6 +10,7 @@
     text-align: center;
     background: rgba(230,230,230,0.4);
     border-bottom: 1px solid rgba(230,230,230,0.8);
+    vertical-align: center;
     height: 45px;
   }
 
@@ -36,7 +37,7 @@
         li {
           list-style: none;
           margin-bottom: 10px;
-          font-size: 14px;
+          font-size: 16px;
         }
       }
 
@@ -52,11 +53,16 @@
   }
 
   .card-rental-owner-information {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
     background: rgba(230,230,230,0.4);
     border-top: 1px solid rgba(230,230,230,0.8);
-    p {
+    height: 30px;
+    width:100%;
+;    p {
      text-align: right;
-     margin-right: 30px;
+     margin: 0 15px;
    }
  }
 }
