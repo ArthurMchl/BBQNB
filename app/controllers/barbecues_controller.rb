@@ -1,6 +1,14 @@
 class BarbecuesController < ApplicationController
   def index
-    @barbecues = Barbecue.all
+
+    p params
+    if !params.nil?
+      @barbecues = Barbecue.where(location: params[:query])
+    else
+      @barbecues = Barbecue.all
+    end
+    p "========="
+    p @barbecues
   end
 
   def new
