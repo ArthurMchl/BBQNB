@@ -1,19 +1,19 @@
-<h1 class ="titre">
-  List of Barbecues
-  <% if params[:query].present?  %>
-    at <%= params[:query].downcase.capitalize %>
-  <% end %>
-</h1>
+<div class="display-background">
+  <h1 class ="display-title">
+    <% if params[:query].present?  %>
+      Available barbecues in <%= params[:query].downcase.capitalize %>
+    <% end %>
+  </h1>
 
 
-<div class="container">
-  <div class="row">
-    <% @barbecues.each do |barbecue| %>
-      <div class="col-sm-12 col-md-4">
-        <%= render "shared/card", barbecue: barbecue %>
-      </div>
+  <div class="container">
+    <div class="row">
+      <% @barbecues.each do |barbecue| %>
+        <div class="col-sm-12 col-md-4">
+          <%= render "shared/card", barbecue: barbecue %>
+        </div>
       <% end %>
     </div>
   </div>
-
+</div>
 
