@@ -1,9 +1,9 @@
 class BarbecuesController < ApplicationController
   def index
-    if params
-      @barbecues = Barbecue.where(location: params[:query].downcase.capitalize)
-    else
+    if params[:query].blank?
       @barbecues = Barbecue.all
+    else
+      @barbecues = Barbecue.where(location: params[:query].downcase.capitalize)
     end
   end
 
