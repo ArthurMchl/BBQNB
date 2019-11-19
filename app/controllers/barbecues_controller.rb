@@ -39,7 +39,9 @@ class BarbecuesController < ApplicationController
   private
 
   def barbecue_params
-    params.require(:barbecue).permit(:name, :query, :location, :search)
+
+    params.require(:barbecue).permit(:name, :category, :photo, :search)
+
   end
 end
 

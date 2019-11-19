@@ -1,9 +1,9 @@
-puts "---- Delete all items in database ----"
+puts '---- Delete all items in database ----'
 Barbecue.destroy_all
 Rental.destroy_all
 User.destroy_all
 
-puts "---- Seed model User (20 instances) ----"
+puts '---- Seed model User (4 instances) ----'
 
 
 micka = User.create(
@@ -23,25 +23,23 @@ micka = User.create(
 
  arthur = User.create(
  {
-  email: "arthur@gmail.com",
-  password: "azerty"
+  email: 'arthur@gmail.com',
+  password: 'azerty'
  }
  )
 
 werner= User.create(
   {
-  email: "werner@gmail.com",
-  password: "azerty"
- }
+  email: 'werner@gmail.com',
+  password: 'azerty'
+  }
  )
 
+puts '---- Seed model User "ok" ---'
 
-p User.all
-puts "---- Seed model User 'ok' ---"
+puts '---- Seed model Barbecue (8 instances) ----'
 
-
-
-barbecue_mick1 = Barbecue.create(
+barbecue_mick_un = Barbecue.create(
   {
     name:         'Barbecue3000',
     description:  'blalalllvldflfdslzflfelsf',
@@ -52,7 +50,7 @@ barbecue_mick1 = Barbecue.create(
   }
 )
 
-barbecue_mick2 = Barbecue.create(
+barbecue_mick_deux = Barbecue.create(
   {
     name:         'BarbecueQuiCrame',
     description:  'blalalllvldflfdslzflfelsf',
@@ -63,7 +61,7 @@ barbecue_mick2 = Barbecue.create(
   }
 )
 
-barbecue_pierre1 = Barbecue.create(
+barbecue_pierre_un = Barbecue.create(
   {
     name:         'Barbecue Super',
     description:  'blalalllvldflfdslzflfelsf',
@@ -74,7 +72,7 @@ barbecue_pierre1 = Barbecue.create(
   }
 )
 
-barbecue_pierre2 = Barbecue.create(
+barbecue_pierre_deux = Barbecue.create(
   {
     name:         'Barbecue à la con',
     description:  'blalalllvldflfdslzflfelsf',
@@ -85,7 +83,7 @@ barbecue_pierre2 = Barbecue.create(
   }
 )
 
-barbecue_arthur1 = Barbecue.create(
+barbecue_arthur_un = Barbecue.create(
   {
     name:         'Le Barbeuc',
     description:  'blalalllvldflfdslzflfelsf',
@@ -96,7 +94,7 @@ barbecue_arthur1 = Barbecue.create(
   }
 )
 
-barbecue_arthur2 = Barbecue.create(
+barbecue_arthur_deux = Barbecue.create(
   {
     name:         'Le Barbeuc',
     description:  'blalalllvldflfdslzflfelsf',
@@ -107,7 +105,7 @@ barbecue_arthur2 = Barbecue.create(
   }
 )
 
-barbecue_werner1 = Barbecue.create(
+barbecue_werner_un = Barbecue.create(
   {
     name:         'SaucisseBarbeux',
     description:  'blalalllvldflfdslzflfelsf',
@@ -118,7 +116,7 @@ barbecue_werner1 = Barbecue.create(
   }
 )
 
-barbecue_werner2 = Barbecue.create(
+barbecue_werner_deux = Barbecue.create(
   {
     name:         'Michelin Barbecue',
     description:  'blalalllvldflfdslzflfelsf',
@@ -129,24 +127,80 @@ barbecue_werner2 = Barbecue.create(
   }
 )
 
+puts '---- Seed model Barbecue "ok" ---'
 
+puts '---- Seed model Rental (8 instances) ----'
 
+rental_mv_pr1 = Rental.create(
+  {
+    start_date:       Time.new(2017, 01, 31, 2, 2, 2, "+02:00"),
+    end_date:         Time.new(2019, 12, 31, 2, 2, 2, "+02:00"),
+    barbecue_id:      barbecue_mick_un.id,
+    user_id:          pierre.id
+  }
+)
 
+rental_mv_pr2 = Rental.create(
+  {
+    start_date:       Time.now,
+    end_date:         Time.new(2020, 01, 31, 2, 2, 2, "+02:00"),
+    barbecue_id:      barbecue_pierre_un.id,
+    user_id:          micka.id
+  }
+)
 
+rental_art_wnr1 = Rental.create(
+  {
+    start_date:       Time.now,
+    end_date:         Time.new(2020, 12, 02, 2, 2, 2, "+02:00"),
+    barbecue_id:      barbecue_arthur_un.id,
+    user_id:          werner.id
+  }
+)
 
+rental_art_wnr2 = Rental.create(
+  {
+    start_date:       Time.now,
+    end_date:         Time.new(2020, 05, 31, 2, 2, 2, "+02:00"),
+    barbecue_id:      barbecue_werner_un.id,
+    user_id:          arthur.id
+  }
+)
 
+rental_mv_art1 = Rental.create(
+  {
+    start_date:       Time.new(2019, 01, 31, 2, 2, 2, "+02:00"),
+    end_date:         Time.new(2019, 12, 31, 2, 2, 2, "+02:00"),
+    barbecue_id:      barbecue_mick_deux.id,
+    user_id:          arthur.id
+  }
+)
 
+rental_mv_art2 = Rental.create(
+  {
+    start_date:       Time.now,
+    end_date:         Time.new(2019, 12, 31, 2, 2, 2, "+02:00"),
+    barbecue_id:      barbecue_arthur_deux.id,
+    user_id:          micka.id
+  }
+)
 
+rental_wnr_pr1 = Rental.create(
+  {
+    start_date:       Time.now,
+    end_date:         Time.new(2020, 01, 31, 2, 2, 2, "+02:00"),
+    barbecue_id:      barbecue_pierre_deux.id,
+    user_id:          werner.id
+  }
+)
 
+rental_wnr_pr2 = Rental.create(
+  {
+    start_date:       Time.new(2020, 01, 31, 2, 2, 2, "+02:00"),
+    end_date:         Time.new(2021, 01, 31, 2, 2, 2, "+02:00"),
+    barbecue_id:      barbecue_werner_deux.id,
+    user_id:          pierre.id
+  }
+)
 
-#   10.times  { count =+ 1
-#               rentals <<
-#               {
-#                 start_date:       Time.now,
-#                 end_date:         Faker::Date.between(from: 150.days.ago, to: Date.today),
-#                 barbecue_id:      count,
-#                 user_id:          users_id_rental[count]
-#               }
-
-
-# puts "---- Seed 'ok' ----"
+puts '---- Seed model Rental "ok" ---'
