@@ -1,10 +1,10 @@
 .btn-ghost {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
+  border: 1px solid black;
   padding: 8px 24px;
-  border-radius: 50px;
+  border-radius: 24px;
   font-weight: lighter;
   opacity: 0.6;
+  background: transparent;
   transition: opacity 0.3s ease;
   text-align: center;
 }
@@ -24,4 +24,8 @@
   transition: opacity 0.3s ease;
   text-align: center;
   width: 56%;
+}
+
+.submit-bbq{
+  margin-top: 16px;
 }
