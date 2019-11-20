@@ -41,7 +41,7 @@ barbecue_mick_un = Barbecue.create(
   location:     'Lille',
   user:         micka,
 )
-barbecue_mick_un.remote_photo_url = "https://www.google.fr/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwir74ih9vjlAhVL8uAKHdo4BUsQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.manomano.fr%2Fp%2Fbarbecue-charbon-moorea-grille-diametre-54-cm-148783&psig=AOvVaw1mcjXhNmTpv8cORNV2_UcA&ust=1574343903085213"
+barbecue_mick_un.remote_photo_url = "https://images-na.ssl-images-amazon.com/images/I/81-fwDoZLOL._SX679_.jpg"
 barbecue_mick_un.save
 
 barbecue_mick_deux = Barbecue.create(
@@ -56,6 +56,8 @@ barbecue_mick_deux = Barbecue.create(
     location:     'Lens',
     user:         micka,
 )
+barbecue_mick_deux.remote_photo_url = "https://photos.gammvert.fr/v5/products/full/45688-barbecue-a-gaz-char-broil-profesional-3400s-2.jpg"
+barbecue_mick_deux.save
 
 barbecue_pierre_un = Barbecue.create(
     name:         'Esprit Barbecue',
@@ -68,6 +70,8 @@ barbecue_pierre_un = Barbecue.create(
     location:     'Lille',
     user:         pierre
 )
+barbecue_pierre_un.remote_photo_url = "https://www.poeleplus.fr/2206-large_default/barbecue-charbon-colorado-ref-5710132-sunday.jpg"
+barbecue_pierre_un.save
 
 barbecue_pierre_deux = Barbecue.create(
     name:         'Barbecook',
@@ -80,6 +84,8 @@ barbecue_pierre_deux = Barbecue.create(
     location:     'Lille',
     user:         pierre
 )
+barbecue_pierre_deux.remote_photo_url = "https://i.pinimg.com/originals/fb/43/80/fb43802833f644dbe1b4a0fed43b5b2e.jpg"
+barbecue_pierre_deux.save
 
 barbecue_arthur_un = Barbecue.create(
     name:         'Somatic barbecues',
@@ -91,6 +97,8 @@ barbecue_arthur_un = Barbecue.create(
     location:     'Lille',
     user:         arthur
 )
+barbecue_arthur_un.remote_photo_url = "https://www.demotivateur.fr/images-buzz/Barbecue5.jpg"
+barbecue_arthur_un.save
 
 barbecue_arthur_deux = Barbecue.create(
     name:         'Dixneuf',
@@ -103,6 +111,8 @@ barbecue_arthur_deux = Barbecue.create(
     location:     'Seclin',
     user:         arthur
 )
+barbecue_arthur_deux.remote_photo_url = "http://nextews.com/images/b5/64/b564d34c7e090ecb.jpg"
+barbecue_arthur_deux.save
 
 barbecue_werner_un = Barbecue.create(
     name:         'Grill`up',
@@ -115,6 +125,8 @@ barbecue_werner_un = Barbecue.create(
     location:     'Lille',
     user:         werner
 )
+barbecue_werner_un.remote_photo_url = "https://www.raviday.com/blog/wp-content/uploads/2016/01/barbecue-insolite-pistolet.jpg"
+barbecue_werner_un.save
 
 barbecue_werner_deux = Barbecue.create(
     name:         'Grill O`Bois',
@@ -127,6 +139,8 @@ barbecue_werner_deux = Barbecue.create(
     location:     'Lille',
     user:         werner
 )
+barbecue_werner_deux.remote_photo_url = "http://gallery.tranchesdunet.com/barbecue-originaux/barbecue_06-plateau-design-630x510.jpg"
+barbecue_werner_deux.save
 
 puts '---- Seed model Barbecue "ok" ---'
 
