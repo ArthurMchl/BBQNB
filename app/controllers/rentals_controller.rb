@@ -8,8 +8,9 @@ class RentalsController < ApplicationController
     @rental = Rental.new(rental_params)
     @barbecue = Barbecue.find(params[:barbecue_id])
     @rental.barbecue = @barbecue
+    @rental.user = current_user
     if @rental.save
-      redirect_to barbecue_rental_path(@barbecue)
+      redirect_to rental_path(@rental)
     else
       render :new
     end
@@ -19,6 +20,7 @@ class RentalsController < ApplicationController
   end
 
   def show
+    @rental = Rental.find(params[:id])
   end
 
   def destroy
