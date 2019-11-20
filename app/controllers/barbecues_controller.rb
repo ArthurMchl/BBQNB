@@ -13,7 +13,10 @@ class BarbecuesController < ApplicationController
 
   def create
     @barbecue = Barbecue.new(barbecue_params)
+
     if @barbecue.save
+      p "-------------------------------------------ok"
+      p @barbecue
       redirect_to barbecue_path(@barbecue)
     else
       render :new
@@ -39,6 +42,6 @@ class BarbecuesController < ApplicationController
   private
 
   def barbecue_params
-    params.require(:barbecue).permit(:name, :category, :photo, :description, :price, :location)
+    params.require(:barbecue).permit(:name, :category, :description, :price, :location, :photo)
   end
 end
