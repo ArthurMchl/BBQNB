@@ -6,6 +6,7 @@
   height: 64px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
+  border-top: 1px solid black;
 }
 .footer-links {
   display: flex;
@@ -23,12 +24,4 @@
 }
 .footer .fa-heart {
   color: #D23333;
-}
-
-footer {
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-
 }

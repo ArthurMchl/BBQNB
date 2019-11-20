@@ -1,26 +1,20 @@
-<div class="card-rental">
-  <h3 class="card-name-barbecue"><%= @barbecue.name %></h3>
-  <div class="card-rental-description">
-    <div class="card-rental-photo">
-       <%= cl_image_tag @barbecue.photo, height: 500, width: 450, crop: :fill %>
+  <div class="card-bbq-show-name"><%= @barbecue.name %></div>
+  <div class="card-bbq-show-details">
+    <div class="card-bbq-show-photo">
+      <%= cl_image_tag @barbecue.photo, width: 320, crop: :fill %>
     </div>
-    <div class="card-information">
-      <div class="card-rental-info">
-        <ul class="information-listings">
-          <li class="information-list"><strong>Description:</strong> <%= @barbecue.description %></li>
-          <li class="information-list"><strong>Catégorie:</strong> <%= @barbecue.category %></li>
-          <li class="information-list"><strong>Ville</strong> <%= @barbecue.location %></li>
-          <li class="information-list"><strong>Prix:</strong> <%= @barbecue.price %>€</li>
-        </ul>
-      </div>
-      <div class="card-rental-rented">
-        <%= image_tag('saucisse.png', size: "60x180" ) %>
-        <%= link_to 'Réserve moi!',new_barbecue_rental_path(@barbecue) ,class: "btn btn-warning"%>
+    <div class="card-bbq-show-information">
+      <div class="card-bbq-show-text">
+        <div class="bbq-basics">
+          <li class="bbq-text">Disponible à <strong><%= @barbecue.location %></strong> </li>
+          <li class="bbq-text">Utilisation: <strong><%= @barbecue.category %></strong> </li>
+          <li class="bbq-text"><strong>Description:</strong> <%= @barbecue.description %></li>
+          <li id="bbq-price"><%= @barbecue.price %> €</li>
+          <div class="btn-ghost submit-bbq">
+            <%= link_to 'Réserve moi!',new_barbecue_rental_path(@barbecue)%>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="card-rental-owner-information">
-    <p><em>Annonce postée le : <%= @barbecue.created_at %></em></p>
-    <p><em>Propriétaire : <%= @barbecue.user.email %></em></p>
-  </div>
-</div>
+
