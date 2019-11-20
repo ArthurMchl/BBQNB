@@ -6,15 +6,16 @@
  -->    </div>
     <div class="card-information">
       <div class="card-rental-info">
-        <ul>
-          <li><strong>Description:</strong> <%= @barbecue.description %></li>
-          <li><strong>Category:</strong> <%= @barbecue.category %></li>
-          <li><strong>Location:</strong> <%= @barbecue.location %></li>
+        <ul class="information-listings">
+          <li class="information-list"><strong>Description:</strong> <%= @barbecue.description %></li>
+          <li class="information-list"><strong>Catégorie:</strong> <%= @barbecue.category %></li>
+          <li class="information-list"><strong>Ville</strong> <%= @barbecue.location %></li>
+          <li class="information-list"><strong>Prix:</strong> <%= @barbecue.price %>€</li>
         </ul>
       </div>
       <div class="card-rental-rented">
         <%= image_tag('saucisse.png', size: "60x180" ) %>
-        <%= link_to 'Grill me plz!',new_barbecue_rental_path(@barbecue) ,class: "btn btn-warning"%>
+        <%= link_to 'Réserve moi!',new_barbecue_rental_path(@barbecue) ,class: "btn btn-warning"%>
       </div>
     </div>
   </div>
