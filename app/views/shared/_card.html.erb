@@ -1,9 +1,9 @@
 <%= link_to barbecue_path(barbecue), class: "card-trip" do %>
-<div class="card-trip">
-  <%= cl_image_tag barbecue.photo, height: 300, width: 400, crop: :fill %>
-<div class="card-trip-infos">
+  <div class="card-trip">
+       <%= cl_image_tag barbecue.photo, height: 500, width: 450, crop: :fill %>
+    <div class="card-trip-infos">
       <h2><%= barbecue.name %> </h2>
       <p> <%= barbecue.price  %> € </p>
+    </div>
   </div>
-</div>
 <% end %>
