@@ -16,15 +16,13 @@ class BarbecuesController < ApplicationController
     @barbecue.user = current_user
     if @barbecue.save
       redirect_to barbecue_path(@barbecue)
-      p "ok"
     else
       render :new
-      p "pas ok"
     end
   end
 
   def show
-    @barbecue = Barbecue.find(params[:id])
+    @barbecue = set_id
   end
 
   def edit
@@ -34,7 +32,7 @@ class BarbecuesController < ApplicationController
   end
 
   def destroy
-    @barbecue = Barbecue.find(params[:id])
+    @barbecue = set_id
     @barbecue.destroy
     redirect_to barbecues_path
   end
@@ -43,5 +41,9 @@ class BarbecuesController < ApplicationController
 
   def barbecue_params
     params.require(:barbecue).permit(:name, :category, :description, :price, :location, :photo, :title, :body)
+  end
+
+  def set_id
+    Barbecue.find(params[:id])
   end
 end

@@ -1,12 +1,12 @@
 class RentalsController < ApplicationController
   def new
-    @barbecue = Barbecue.find(params[:barbecue_id])
+    @barbecue = set_id_barbecue
     @rental = Rental.new
   end
 
   def create
     @rental = Rental.new(rental_params)
-    @barbecue = Barbecue.find(params[:barbecue_id])
+    @barbecue = set_id_barbecue
     @rental.barbecue = @barbecue
     @rental.user = current_user
     if @rental.save
@@ -30,5 +30,9 @@ class RentalsController < ApplicationController
 
   def rental_params
     params.require(:rental).permit(:start_date, :end_date, :barbecue_id)
+  end
+
+  def set_id_barbecue
+    Barbecue.find(params[:barbecue_id])
   end
 end
