@@ -17,7 +17,6 @@ class BarbecuesController < ApplicationController
     if @barbecue.save
       redirect_to barbecue_path(@barbecue)
     else
-      raise
       render :new
     end
   end
