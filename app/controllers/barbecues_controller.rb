@@ -16,14 +16,13 @@ class BarbecuesController < ApplicationController
     @barbecue.user = current_user
     if @barbecue.save
       redirect_to barbecue_path(@barbecue)
-      p "ok"
     else
       render :new
-      p "pas ok"
     end
   end
 
   def show
+    @rental = Rental.new
     @barbecue = Barbecue.find(params[:id])
   end
 

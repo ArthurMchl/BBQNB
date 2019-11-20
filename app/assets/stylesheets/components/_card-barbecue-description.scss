@@ -22,9 +22,13 @@
   list-style: none;
   font-size: 24px;
   text-align: center;
-}
+  width: 28%;
+  padding-top: 32px;
+  }
 
 .card-bbq-show-photo{
+  height: 320px;
+  width: 380px;
   margin: 8px;
 }
 
@@ -42,12 +46,6 @@
   list-style: none;
 }
 
-.bbq-description{
-}
-
-.bbq-booking{
-}
-
 .bbq-text{
   margin: 8px 2px 8px 2px;
   border-bottom: 1px solid black;
@@ -55,4 +53,42 @@
 
 .submit-bbq{
   margin-bottom: 8px;
+}
+
+.datepicker{
+  border: 1px solid;
+  border-radius: 28px;
+}
+
+#rental_start_date{
+  background-color: white;
+}
+
+#rental_end_date{
+  background-color: white;
+}
+
+.form-group.string.optional.rental_start_date{
+  margin-bottom: 0;
+}
+
+.form-group.string.optional.rental_end_date{
+  margin-bottom: 0;
+}
+
+#new-rental{
+  display: block;
+}
+
+#new-rental-dates{
+  display: flex;
+}
+
+.simple_form.new_rental{
+  width: 72%;
+}
+
+#new-rental-details{
+  display: flex;
+  padding: 0px 16px;
 }
