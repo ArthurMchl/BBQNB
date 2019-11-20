@@ -41,7 +41,7 @@ puts '---- Seed model Barbecue (8 instances) ----'
 
 barbecue_mick_un = Barbecue.create!(
   {
-    name:         'Barbecue3000',
+    name:         'Barbecue super 3000++',
     description:  "Ce pack est composé d'un brasero sur trois pieds en acier ø 59 cm, d'une grille de cuisson de ø 60 cm (idéale pour vos
                   cuissons de poissons, de légumes) et d'un kit marshmallow qui fera le bonheur des plus jeunes, à condition qu'un adulte soit présent !
                   Attention : Le brasero ne doit pas être posé sur une terrasse en bois. La chaleur qui est générée peut abîmer le sol.",
@@ -111,6 +111,7 @@ barbecue_arthur_un = Barbecue.create!(
 barbecue_arthur_deux = Barbecue.create!(
   {
     name:         'Dixneuf',
+
     description:  'blalalllvldflfdslzflfelsf',
     category:     'Electrique',
     price:        270,
@@ -122,6 +123,7 @@ barbecue_arthur_deux = Barbecue.create!(
 barbecue_werner_un = Barbecue.create!(
   {
     name:         'Grill`up',
+
     description:  'blalalllvldflfdslzflfelsf',
     category:     'Electrique',
     price:        790,
