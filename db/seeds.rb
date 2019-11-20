@@ -42,7 +42,9 @@ puts '---- Seed model Barbecue (8 instances) ----'
 barbecue_mick_un = Barbecue.create(
   {
     name:         'Barbecue3000',
-    description:  'blalalllvldflfdslzflfelsf',
+    description:  "Ce pack est composé d'un brasero sur trois pieds en acier ø 59 cm, d'une grille de cuisson de ø 60 cm (idéale pour vos
+                  cuissons de poissons, de légumes) et d'un kit marshmallow qui fera le bonheur des plus jeunes, à condition qu'un adulte soit présent !
+                  Attention : Le brasero ne doit pas être posé sur une terrasse en bois. La chaleur qui est générée peut abîmer le sol.",
     category:     'gaz',
     price:        330,
     location:     'Lille',
@@ -52,7 +54,7 @@ barbecue_mick_un = Barbecue.create(
 
 barbecue_mick_deux = Barbecue.create(
   {
-    name:         'BarbecueQuiCrame',
+    name:         'Weber',
     description:  "Stand 4 pieds avec système de démontage facile, idéal pour les espaces types balcon,
                   terrasse
                   Barbecue électrique avec grille de cuisson haute résistance en fonte d'acier émaillée,
@@ -67,10 +69,13 @@ barbecue_mick_deux = Barbecue.create(
 
 barbecue_pierre_un = Barbecue.create(
   {
-    name:         'Barbecue Super',
-    description:  'blalalllvldflfdslzflfelsf',
+    name:         'Esprit Barbecue',
+    description:  "La locomotive Joe's Wild West est équipé de deux chambres qui permettent de cuir ou
+                  fumer vos aliments à des températures comprises entre 90 et 130°C ! Une fabrication à la
+                  main est donc, parfaitement soignée. L'acier qui constitue la locomotive a une épaisseur
+                  de 6,35 mm, ce qui lui garantie une durée de vie supérieur à la moyenne d'un barbecue lambda.",
     category:     'gaz',
-    price:        500,
+    price:        100,
     location:     'Lille',
     user:         pierre
   }
@@ -78,8 +83,11 @@ barbecue_pierre_un = Barbecue.create(
 
 barbecue_pierre_deux = Barbecue.create(
   {
-    name:         'Barbecue à la con',
-    description:  'blalalllvldflfdslzflfelsf',
+    name:         'Barbecook',
+    description:  "Le Royal 320 noir est un barbecue à gaz qui vous offre toute une multitude de
+                  possibilités en matière de cuisson, mais également un confort important pendant la
+                  préparation de vos repas ! Un incroyable mélange de design et de praticité qui fera
+                  le bonheur des amateurs de barbecue ! ",
     category:     'gaz',
     price:        100,
     location:     'Lille',
@@ -89,8 +97,10 @@ barbecue_pierre_deux = Barbecue.create(
 
 barbecue_arthur_un = Barbecue.create(
   {
-    name:         'Le Barbeuc',
-    description:  'blalalllvldflfdslzflfelsf',
+    name:         'Somatic barbecues',
+    description:  "Barbecue à gaz Broil King Impérial XL, pour 18 à 20 personnes, grilles de cuisson en
+                  fonte et inox, 6 brûleurs, un brûleur arrière pour la rôtissoire et un réchaud latéral.
+                  Ce barbecue est l'un des plus complet et polyvalent jamais créé. ",
     category:     'electrique',
     price:        100,
     location:     'Lille',
@@ -100,7 +110,7 @@ barbecue_arthur_un = Barbecue.create(
 
 barbecue_arthur_deux = Barbecue.create(
   {
-    name:         'Le Barbeuc',
+    name:         'Dixneuf',
     description:  'blalalllvldflfdslzflfelsf',
     category:     'electrique',
     price:        270,
@@ -111,7 +121,7 @@ barbecue_arthur_deux = Barbecue.create(
 
 barbecue_werner_un = Barbecue.create(
   {
-    name:         'SaucisseBarbeux',
+    name:         'Grill`up',
     description:  'blalalllvldflfdslzflfelsf',
     category:     'electrique',
     price:        790,
@@ -122,7 +132,7 @@ barbecue_werner_un = Barbecue.create(
 
 barbecue_werner_deux = Barbecue.create(
   {
-    name:         'Michelin Barbecue',
+    name:         'Grill O`Bois',
     description:  'blalalllvldflfdslzflfelsf',
     category:     'autre',
     price:        1200,
