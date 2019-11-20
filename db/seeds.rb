@@ -48,7 +48,7 @@ barbecue_mick_un = Barbecue.create(
     category:     'gaz',
     price:        330,
     location:     'Lille',
-    user:         micka
+    user:         micka,
   }
 )
 
@@ -63,7 +63,7 @@ barbecue_mick_deux = Barbecue.create(
     category:     'charbon',
     price:        500,
     location:     'Lens',
-    user:         micka
+    user:         micka,
   }
 )
 

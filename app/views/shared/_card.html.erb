@@ -1,11 +1,9 @@
+<%= link_to barbecue_path(barbecue), class: "card-trip" do %>
 <div class="card-trip">
-  <img src= "https://n2k3i5s6.stackpathcdn.com/wp-content/uploads/2019/07/barbecue-star-wars-114-1140x445.jpg" />
-  <div class="card-trip-infos">
-    <div>
-  <h2> <%= link_to barbecue.name, barbecue_path(barbecue)%></h2>
-    </div>
-    <h2 class="card-trip-pricing">
-    <%= barbecue.price  %> €
-    </h2>
+  <%= image_tag('barbecue2') %>
+<div class="card-trip-infos">
+      <h2><%= barbecue.name %> </h2>
+      <p> <%= barbecue.price  %> € </p>
   </div>
 </div>
+<% end %>
