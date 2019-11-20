@@ -41,7 +41,7 @@ puts '---- Seed model Barbecue (8 instances) ----'
 
 barbecue_mick_un = Barbecue.create(
   {
-    name:         'Barbecue3000',
+    name:         'Barbecue super 3000++',
     description:  "Ce pack est composé d'un brasero sur trois pieds en acier ø 59 cm, d'une grille de cuisson de ø 60 cm (idéale pour vos
                   cuissons de poissons, de légumes) et d'un kit marshmallow qui fera le bonheur des plus jeunes, à condition qu'un adulte soit présent !
                   Attention : Le brasero ne doit pas être posé sur une terrasse en bois. La chaleur qui est générée peut abîmer le sol.",
@@ -111,7 +111,10 @@ barbecue_arthur_un = Barbecue.create(
 barbecue_arthur_deux = Barbecue.create(
   {
     name:         'Dixneuf',
-    description:  'blalalllvldflfdslzflfelsf',
+    description:  "La locomotive Joe's Wild West est équipé de deux chambres qui permettent de cuir ou
+                  fumer vos aliments à des températures comprises entre 90 et 130°C ! Une fabrication à la
+                  main est donc, parfaitement soignée. L'acier qui constitue la locomotive a une épaisseur
+                  de 6,35 mm, ce qui lui garantie une durée de vie supérieur à la moyenne d'un barbecue lambda.",
     category:     'electrique',
     price:        270,
     location:     'Seclin',
@@ -122,7 +125,10 @@ barbecue_arthur_deux = Barbecue.create(
 barbecue_werner_un = Barbecue.create(
   {
     name:         'Grill`up',
-    description:  'blalalllvldflfdslzflfelsf',
+    description:  "Le barbecue à charbon de bois Weber conservera toutes les saveurs de vos aliments
+                  grâce à son système de cuisson à chaleur tournante. Vous pourrez cuisiner avec le couvercle
+                  fermé afin d'éviter les flammes et la fumée. Le couvercle est doté d'un clapet d'aération qui
+                  permet de relancer les braises.",
     category:     'electrique',
     price:        790,
     location:     'Lille',
@@ -133,7 +139,10 @@ barbecue_werner_un = Barbecue.create(
 barbecue_werner_deux = Barbecue.create(
   {
     name:         'Grill O`Bois',
-    description:  'blalalllvldflfdslzflfelsf',
+    description:  "Le barbecue à charbon de bois Weber conservera toutes les saveurs de vos aliments
+                  grâce à son système de cuisson à chaleur tournante. Vous pourrez cuisiner avec le couvercle
+                  fermé afin d'éviter les flammes et la fumée. Le couvercle est doté d'un clapet d'aération qui
+                  permet de relancer les braises.",
     category:     'autre',
     price:        1200,
     location:     'Lille',
