@@ -17,7 +17,6 @@ class BarbecuesController < ApplicationController
     if @barbecue.save
       redirect_to barbecue_path(@barbecue)
     else
-      raise
       render :new
     end
   end
@@ -41,6 +40,6 @@ class BarbecuesController < ApplicationController
   private
 
   def barbecue_params
-    params.require(:barbecue).permit(:name, :category, :description, :price, :location, :photo, :title, :body)
+    params.require(:barbecue).permit(:name, :category, :description, :price, :location, :photo, :title,)
   end
 end
