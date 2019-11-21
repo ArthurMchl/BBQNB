@@ -22,7 +22,8 @@ class BarbecuesController < ApplicationController
   end
 
   def show
-    @barbecue = set_id
+    @rental = Rental.new
+    @barbecue = Barbecue.find(params[:id])
   end
 
   def edit

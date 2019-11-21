@@ -10,7 +10,7 @@ class RentalsController < ApplicationController
     @rental.barbecue = @barbecue
     @rental.user = current_user
     if @rental.save
-      redirect_to rental_path(@rental)
+      redirect_to root_path
     else
       render :new
     end
