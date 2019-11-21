@@ -31,7 +31,7 @@
      </div>
     <div id="new-rental-details">
       <div id="bbq-price">
-        <%= @barbecue.price %> €
+     <p class="price">   <%= @barbecue.price %> € </p>
         <div class="btn-ghost submit-bbq">
         <% if @barbecue.user == current_user %>
         <%= link_to "Je supprime",@barbecue, method: :delete %>
