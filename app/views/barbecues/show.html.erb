@@ -33,8 +33,10 @@
       <div id="bbq-price">
         <%= @barbecue.price %> €
               <div class="btn-ghost submit-bbq">
+                        <%=  p @barbecue %>
+
         <% if @barbecue.user == current_user %>
-        <%= redirect_to %>
+        <%= link_to "Je supprime",barbecues_path(@barbecue), method: "delete" %>
         <% else %>
         <%= f.button :submit, "Je réserve ! !" %>
         <% end %>

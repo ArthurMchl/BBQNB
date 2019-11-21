@@ -55,7 +55,7 @@ class BarbecuesController < ApplicationController
   private
 
   def barbecue_params
-    params.require(:barbecue).permit(:name, :category, :description, :price, :location, :photo, :title,)
+    params.require(:barbecue).permit(:name, :category, :description, :price, :location, :photo, :title)
   end
 
   def set_id
