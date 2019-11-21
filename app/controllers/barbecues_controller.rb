@@ -12,8 +12,8 @@ class BarbecuesController < ApplicationController
   end
 
   def create
-    @barbecue = Barbecue.new(barbecue_params)
-    @barbecue.user = current_user
+    @barbecue       = Barbecue.new(barbecue_params)
+    @barbecue.user  = current_user
     if @barbecue.save
       redirect_to barbecue_path(@barbecue)
     else
@@ -22,8 +22,15 @@ class BarbecuesController < ApplicationController
   end
 
   def show
-    @rental = Rental.new
-    @barbecue = Barbecue.find(params[:id])
+    @rental         = Rental.new
+    @barbecue       = Barbecue.find(params[:id])
+    @rentals        = @barbecue.rentals
+    @dates_rentals  = @rentals.map do |rental|
+      {
+        from: rental.start_date,
+        to: rental.end_date
+      }
+    end
   end
 
   def edit
