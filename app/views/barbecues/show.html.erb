@@ -30,5 +30,14 @@
     </div>
   </div>
 </div>
+
 <div id="rental-form" data-rentals="<%= @dates_rentals.to_json %>"></div>
+
+
+<div><% @barbecue.reviews.each do |review| %>
+  <h2> <%= review.content%></h2>
+  <h2><%= review.rating %></h2>
+<% end %></div>
+
+<%= link_to "add review", new_barbecue_review_path(@barbecue)%>
 
