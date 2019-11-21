@@ -1,11 +1,11 @@
 footer {
   display: table-row;
   height:64px;
-  background: #273c75;
+  background: rgba(230,230,230,0.95);
 }
 
 .footer-links {
-  border-top: 2px solid rgba(10,10,10,0.95);
+  border-top: 1px solid rgba(100,100,100,0.95);
   display: flex;
   padding-top: 20px;
   justify-content: space-evenly;
@@ -16,7 +16,7 @@ footer {
 }
 
 .footer-links a {
-  color: rgba(10,10,10,0.95);
+  color: rgba(100,100,100,0.95);
   transition: color 1s;
   text-decoration: none;
   font-size: 24px;
@@ -24,7 +24,7 @@ footer {
 }
 
 .footer-links a:hover {
-  color: rgba(255,255,255,0.95);
+  color: rgba(0,0,0,0.95);
 }
 
 .footer .fa-heart {
