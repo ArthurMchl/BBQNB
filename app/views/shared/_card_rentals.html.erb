@@ -5,6 +5,8 @@
       <%= rental.start_date %>
       <%=rental.end_date%>
       <%=rental.barbecue.name%>
+      <%= link_to "add review", new_barbecue_review_path(rental.barbecue)%>
+
     </div>
   </div>
 <% end %>
