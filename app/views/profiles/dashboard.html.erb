@@ -1,0 +1,27 @@
+<h1>Mes locations</h1>
+
+  <div class="container">
+    <div class="row">
+      <% @rentals.each do |rental| %>
+        <div class="col-sm-12 col-md-4">
+          <%= render "shared/card_rentals", rental: rental %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<h1>Mes barbecues</h1>
+
+  <div class="container">
+    <div class="row">
+      <% @barbecues.each do |barbecue| %>
+        <div class="col-sm-12 col-md-4">
+          <%= render "shared/card", barbecue: barbecue %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
