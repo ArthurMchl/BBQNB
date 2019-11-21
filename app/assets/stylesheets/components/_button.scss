@@ -43,20 +43,18 @@
   margin:        10px auto;
   margin-bottom: 30px;
   border:        2px solid red;
-  color:         red;
+  color:         white;
   padding:       8px 24px;
   border-radius: 24px;
   font-weight:   bold;
-  opacity:       0.6;
-  background:    transparent;
-  transition:    opacity 0.3s ease;
+  background-color: red;
   text-align:    center;
 }
 
 .addreview:hover {
   text-decoration: none;
   opacity: 1;
-  color: black;
+
 }
 
 .search-form-control .btn {
@@ -67,4 +65,9 @@ background-color: red;
 .search-form-control .btn {
 color: white;
 background-color: red;
+}
+
+.btn {
+background-color: red;
+color: white
 }
