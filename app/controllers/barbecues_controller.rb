@@ -12,8 +12,8 @@ class BarbecuesController < ApplicationController
   end
 
   def create
-    @barbecue = Barbecue.new(barbecue_params)
-    @barbecue.user = current_user
+    @barbecue       = Barbecue.new(barbecue_params)
+    @barbecue.user  = current_user
     if @barbecue.save
       redirect_to barbecue_path(@barbecue)
     else
@@ -22,8 +22,15 @@ class BarbecuesController < ApplicationController
   end
 
   def show
-    @rental = Rental.new
-    @barbecue = Barbecue.find(params[:id])
+    @rental         = Rental.new
+    @barbecue       = Barbecue.find(params[:id])
+    @rentals        = @barbecue.rentals
+    @dates_rentals  = @rentals.map do |rental|
+      {
+        from: rental.start_date,
+        to: rental.end_date
+      }
+    end
   end
 
   def edit
@@ -33,7 +40,7 @@ class BarbecuesController < ApplicationController
   end
 
   def destroy
-    @barbecue = Barbecue.find(params[:id])
+    @barbecue = set_id
     @barbecue.destroy
     redirect_to barbecues_path
   end
@@ -42,5 +49,9 @@ class BarbecuesController < ApplicationController
 
   def barbecue_params
     params.require(:barbecue).permit(:name, :category, :description, :price, :location, :photo, :title, :body)
+  end
+
+  def set_id
+    Barbecue.find(params[:id])
   end
 end
