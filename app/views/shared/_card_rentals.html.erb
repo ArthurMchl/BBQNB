@@ -2,11 +2,9 @@
   <div class="card-trip">
        <%= cl_image_tag rental.barbecue.photo, height: 500, width: 450, crop: :fill %>
     <div class="card-trip-infos">
-      <%= rental.start_date %>
+      <strong><%=rental.barbecue.name%></strong>
+      <%=rental.start_date %>
       <%=rental.end_date%>
-      <%=rental.barbecue.name%>
-      <%= link_to "add review", new_barbecue_review_path(rental.barbecue)%>
-
-    </div>
+      </div>
   </div>
 <% end %>

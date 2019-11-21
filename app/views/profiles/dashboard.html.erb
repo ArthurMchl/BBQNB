@@ -5,6 +5,9 @@
       <% @rentals.each do |rental| %>
         <div class="col-sm-12 col-md-4">
           <%= render "shared/card_rentals", rental: rental %>
+          <div class="d-flex">
+            <%= link_to "add review", new_barbecue_review_path(rental.barbecue), class: "addreview"%>
+          </div>
         </div>
 
       <% end %>
