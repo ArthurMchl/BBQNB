@@ -1,6 +1,6 @@
 puts '---- Delete all items in database ----'
-Barbecue.destroy_all
 Rental.destroy_all
+Barbecue.destroy_all
 User.destroy_all
 
 puts '---- Seed model User (4 instances) ----'
