@@ -17,8 +17,8 @@
     </div>
     <div class="bbq-reviews">
       <% @barbecue.reviews.each do |review| %>
-        <li class="bbq-text"><%= review.rating %></li>
-        <li class="bbq-text"><strong>Reviews:</strong><%= review.content%></li>
+        <li><strong>Note: </strong><%= review.rating %></li>
+        <li class="bbq-text"><strong>Review: </strong><%= review.content%></li>
       <% end %>
     </div>
   </div>
