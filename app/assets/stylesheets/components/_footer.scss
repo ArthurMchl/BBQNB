@@ -1,11 +1,12 @@
 footer {
   display: table-row;
   height:64px;
-  background: rgba(230,230,230,0.95);
+  background: black;
 }
 
 .footer-links {
-  border-top: 1px solid rgba(100,100,100,0.95);
+  border-top: 2px solid rgba(250,250,250,0.95);
+  transition: border-top 2s;
   display: flex;
   padding-top: 20px;
   justify-content: space-evenly;
@@ -15,8 +16,12 @@ footer {
   }
 }
 
+.footer-links:hover {
+  border-top: 2px solid red;
+}
+
 .footer-links a {
-  color: rgba(100,100,100,0.95);
+  color: rgba(210,210,210,0.95);
   transition: color 1s;
   text-decoration: none;
   font-size: 24px;
@@ -24,7 +29,7 @@ footer {
 }
 
 .footer-links a:hover {
-  color: rgba(0,0,0,0.95);
+  color: #e33535;
 }
 
 .footer .fa-heart {
