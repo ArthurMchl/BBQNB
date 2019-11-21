@@ -1,7 +1,7 @@
 <div class="display-background">
   <h1 class ="display-title">
     <% if params[:query].present?  %>
-      Available barbecues in <%= params[:query].downcase.capitalize %>
+      Barbecues disponible sur <%= params[:query].downcase.capitalize %>
     <% end %>
   </h1>
 
@@ -16,4 +16,12 @@
     </div>
   </div>
 </div>
+
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="pk.eyJ1Ijoid2VybmRldiIsImEiOiJjazJnODkyNGowbjdnM2hwNXhpMzI1MmZ2In0.LPiWh1iQx0lgYsuk-B8QTg"
+></div>
 
