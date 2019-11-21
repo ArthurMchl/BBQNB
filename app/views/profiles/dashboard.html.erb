@@ -1,3 +1,27 @@
 <h1>Profiles#dashboard</h1>
 <p>Find me in app/views/profiles/dashboard.html.erb</p>
 
+
+  <div class="container">
+    <div class="row">
+      <% @rentals.each do |rental| %>
+        <div class="col-sm-12 col-md-4">
+          <%= render "shared/card_rentals", rental: rental %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+    <div class="row">
+      <% @barbecues.each do |barbecue| %>
+        <div class="col-sm-12 col-md-4">
+          <%= render "shared/card", barbecue: barbecue %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
