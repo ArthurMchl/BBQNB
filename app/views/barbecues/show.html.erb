@@ -32,9 +32,13 @@
     <div id="new-rental-details">
       <div id="bbq-price">
         <%= @barbecue.price %> €
+              <div class="btn-ghost submit-bbq">
+        <% if @barbecue.user == current_user %>
+        <%= redirect_to %>
+        <% else %>
+        <%= f.button :submit, "Je réserve ! !" %>
+        <% end %>
       </div>
-      <div class="btn-ghost submit-bbq">
-        <%= f.button :submit, "Je réserve !" %>
         <% end %>
       </div>
     </div>
