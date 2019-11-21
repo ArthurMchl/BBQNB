@@ -1,18 +1,18 @@
 class RentalsController < ApplicationController
   def new
-    @barbecue = Barbecue.find(params[:barbecue_id])
+    @barbecue = set_id_barbecue
     @rental = Rental.new
   end
 
   def create
     @rental = Rental.new(rental_params)
-    @barbecue = Barbecue.find(params[:barbecue_id])
+    @barbecue = set_id_barbecue
     @rental.barbecue = @barbecue
     @rental.user = current_user
     if @rental.save
-      redirect_to rental_path(@rental)
+      redirect_to profiles_dashboard_path
     else
-      render :new
+      redirect_to barbecue_path(@barbecue)
     end
   end
 
@@ -30,5 +30,9 @@ class RentalsController < ApplicationController
 
   def rental_params
     params.require(:rental).permit(:start_date, :end_date, :barbecue_id)
+  end
+
+  def set_id_barbecue
+    Barbecue.find(params[:barbecue_id])
   end
 end
