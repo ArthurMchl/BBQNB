@@ -1,7 +1,6 @@
-<div class="container">
-  <h1>Felicitations !</h1>
+<div class="container" style="height: calc(100vh - 80px - 64px)">
+  <h1>Félicitations !</h1>
   <p>Votre reservation a bien été effectuée du </p>
   <p> <%= @rental.start_date%> au <%= @rental.end_date%></p>
 </div>
 
-<%= link_to "Revenir à l'accueil", root_path %>

@@ -22,6 +22,7 @@ class BarbecuesController < ApplicationController
   end
 
   def show
+    @rental = Rental.new
     @barbecue = Barbecue.find(params[:id])
   end
 
