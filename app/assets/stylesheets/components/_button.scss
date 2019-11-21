@@ -1,16 +1,18 @@
 .btn-ghost {
+  background-color: red;
   border: 1px solid black;
   padding: 8px 24px;
   border-radius: 24px;
   font-weight: bold;
   text-align: center;
   background-color: red;
+
   color: white;
 }
 
 .btn-ghost:hover {
+  opacity: 0.6;
   text-decoration: none;
-  opacity: 1;
 }
 
 .btn-ghost-sign-up {
@@ -55,6 +57,12 @@
   opacity: 1;
   color: black;
 }
+
+.search-form-control .btn {
+color: white;
+background-color: red;
+}
+
 .search-form-control .btn {
 color: white;
 background-color: red;

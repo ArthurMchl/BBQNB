@@ -1,41 +1,42 @@
-<div class="card-bbq-show-name"><%= @barbecue.name %> </div>
-<div class="card-bbq-show-details">
-  <div class="concontainer">
-    <div class="card-bbq-show-photo">
-    <%= cl_image_tag @barbecue.photo, height: 320, width: 380, crop: :fill %>
-    </div>
-      <div id="new-rental-details">
-        <%= simple_form_for [@barbecue, @rental] do |f| %>
+<div class="container-bbq-show">
+  <div class="container-card-bbq-details">
+    <div class="card-bbq-show-name"><%= @barbecue.name %> </div>
+    <div class="card-bbq-show-details">
 
-        <div id="new-rental-dates">
-          <%= f.input  :start_date, as: :string, label: "Selectionner vos dates :", required: false, input_html: {id: "range_start", class: "d-none"} %>
-          <%= f.input  :end_date,   as: :string, label: false, required: false, input_html: {id: "range_end" , class: "d-none"} %>
-        </div>
-        <div class="btn-ghost submit-bbq">
-          <%= f.button :submit, "Je réserve !" %>
-          <% end %>
-        </div>
-        <div id="bbq-price">
-          <%= @barbecue.price %> €
+      <div class="card-bbq-show-photo">
+        <%= cl_image_tag @barbecue.photo, height: 320, width: 380, crop: :fill %>
+      </div>
+      <div class="card-bbq-show-information">
+        <div class="card-bbq-show-text">
+            <li class="bbq-text">Disponible à <strong><%= @barbecue.location %></strong> </li>
+            <li class="bbq-text">Utilisation: <strong><%= @barbecue.category %></strong> </li>
+            <li class="bbq-text"><strong>Description:</strong> <%= @barbecue.description %> </li>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, ut praesentium nulla obcaecati iusto rem consectetur sed tempore ad, adipisci ducimus? Debitis commodi, asperiores quos, nam eum enim architecto amet.</p>
         </div>
       </div>
+    </div>
+    <div class="bbq-reviews">
+      <% @barbecue.reviews.each do |review| %>
+        <li><strong>Note: </strong><%= review.rating %></li>
+        <li class="bbq-text"><strong>Review: </strong><%= review.content%></li>
+      <% end %>
+    </div>
   </div>
-  <div class="card-bbq-show-information">
-    <div class="card-bbq-show-text">
-      <div class="bbq-basics">
-        <li class="bbq-text">Disponible à <strong><%= @barbecue.location %></strong> </li>
-        <li class="bbq-text">Utilisation: <strong><%= @barbecue.category %></strong> </li>
-        <li class="bbq-text"><strong>Description:</strong> <%= @barbecue.description %> </li>
+
+  <div class="booking-details">
+    <div id="rental-form" data-rentals="<%= @dates_rentals.to_json %>">
+      <%= simple_form_for [@barbecue, @rental] do |f| %>
+        <%= f.input  :start_date, as: :string, label: "Dates de location", required: false, input_html: {id: "range_start", class: "d-none"} %>
+        <%= f.input  :end_date,   as: :string, label: false, required: false, input_html: {id: "range_end" , class: "d-none"} %>
+     </div>
+    <div id="new-rental-details">
+      <div id="bbq-price">
+        <%= @barbecue.price %> €
+      </div>
+      <div class="btn-ghost submit-bbq">
+        <%= f.button :submit, "Je réserve !" %>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
-
-<div id="rental-form" data-rentals="<%= @dates_rentals.to_json %>"></div>
-
-
-<div><% @barbecue.reviews.each do |review| %>
-  <h2> <%= review.content%></h2>
-  <h2><%= review.rating %></h2>
-<% end %></div>
-

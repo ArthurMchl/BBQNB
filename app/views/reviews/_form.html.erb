@@ -1,11 +1,8 @@
 <%= simple_form_for [@barbecue, @review] do |f| %>
   <div>
- <%= f.input :content %>
+ <%= f.input :content, label: 'Commentaire' %>
+ <%= f.input :rating, collection: ["1", "2", "3", "4", "5"], label:'Note' %>
   </div>
 
-  <div>
- <%= f.input :rating %>
-  </div>
-
-  <%= f.submit %>
+  <%= f.submit 'Je valide', class: "addreview"%>
 <% end %>
