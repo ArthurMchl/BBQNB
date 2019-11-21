@@ -1,3 +1,9 @@
 <div class="container-card-bbq-show">
   <%= render 'shared/card-barbecue-description', barbecue: @barbecue %>
 </div>
+<div><% @barbecue.reviews.each do |review| %>
+  <h2> <%= review.content%></h2>
+  <h2><%= review.rating %></h2>
+<% end %></div>
+
+<%= link_to "add review", new_barbecue_review_path(@barbecue)%>
