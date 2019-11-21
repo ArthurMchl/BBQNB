@@ -3,15 +3,17 @@ body {
 }
 
 .registration-container{
-  margin: 40px 800px 40px 80px;
+  margin: 40px auto;
   border: 1px solid;
   border-color: black;
   border-radius: 28px;
   padding: 40px;
   font-weight: lighter;
   background: transparent;
+  width: 500px;
 }
 
 .registration-container h1 {
   font-family: 'Roboto', sans-serif;
 }
+
