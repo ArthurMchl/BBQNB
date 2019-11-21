@@ -1,11 +1,9 @@
 
-<%=link_to rental_path(rental),class: "card-trip" do %>
+
   <div class="card-trip">
        <%= cl_image_tag rental.barbecue.photo, height: 500, width: 450, crop: :fill %>
     <div class="card-trip-infos">
       <strong><%=rental.barbecue.name%></strong>
-      <%=rental.start_date %>
-      <%=rental.end_date%>
+      Du <%=parse_date_fr(rental.start_date)%> au <%=parse_date_fr(rental.end_date)%>
       </div>
   </div>
-<% end %>
