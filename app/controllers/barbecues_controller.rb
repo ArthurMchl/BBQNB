@@ -5,6 +5,13 @@ class BarbecuesController < ApplicationController
     else
       @barbecues = Barbecue.where(location: params[:query].downcase.capitalize)
     end
+    @barbecues_mapped = Barbecue.geocoded
+    @markers = @barbecues_mapped.map do |barbecue|
+      {
+        lat: barbecue.latitude,
+        lng: barbecue.longitude
+      }
+    end
   end
 
   def new
