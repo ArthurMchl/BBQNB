@@ -87,7 +87,7 @@ barbecue_pierre_deux = Barbecue.create(
                   le bonheur des amateurs de barbecue ! ",
     category:     'Gaz',
     price:        100,
-    location:     'Lille',
+    location:     'Wavrin',
     user:         pierre
 )
 barbecue_pierre_deux.remote_photo_url = "https://i.pinimg.com/originals/fb/43/80/fb43802833f644dbe1b4a0fed43b5b2e.jpg"
@@ -96,13 +96,11 @@ barbecue_pierre_deux.save
 barbecue_arthur_un = Barbecue.create(
 
     name:         'Somatic barbecues',
-    description:  "Barbecue à Gaz Broil King Impérial XL, pour 18 à 20 personnes, grilles de cuisson en
-                  fonte et inox, 6 brûleurs, un brûleur arrière pour la rôtissoire et un réchaud latéral.
-                  Ce barbecue est l'un des plus complet et polyvalent jamais créé. ",
+    description:  "Le barbecue électrique - appelé aussi Grill électrique - est idéal pour être utilisé en extérieur lors d’une belle journée ensoleillée ou en intérieur lorsque le temps ne s’y prête pas. Pour gagner de la place sur la table du repas, choisissez un modèle sur pieds. À vous les brochettes épicées, les poissons grillés et les cuisses de poulet dorées, les amateurs de grillades conviviales vont se régaler.  ",
     category:     'Electrique',
     price:        100,
-    location:     'Lille',
-    user:         arthur
+    location:     'Haubourdin',
+    user:         pierre
 )
 barbecue_arthur_un.remote_photo_url = "https://www.demotivateur.fr/images-buzz/Barbecue5.jpg"
 barbecue_arthur_un.save
@@ -112,11 +110,11 @@ barbecue_arthur_deux = Barbecue.create(
 
     name:         'Dixneuf',
 
-    description:  'blalalllvldflfdslzflfelsf',
+    description:  'Le barbecue électrique - appelé aussi Grill électrique - est idéal pour être utilisé en extérieur lors d’une belle journée ensoleillée ou en intérieur lorsque le temps ne s’y prête pas. Pour gagner de la place sur la table du repas, choisissez un modèle sur pieds. À vous les brochettes épicées, les poissons grillés et les cuisses de poulet dorées, les amateurs de grillades conviviales vont se régaler. ',
     category:     'Electrique',
     price:        270,
     location:     'Seclin',
-    user:         arthur
+    user:         pierre
 )
 barbecue_arthur_deux.remote_photo_url = "http://nextews.com/images/b5/64/b564d34c7e090ecb.jpg"
 barbecue_arthur_deux.save
@@ -125,7 +123,7 @@ barbecue_werner_un = Barbecue.create(
 
     name:         'Grill`up',
 
-    description:  'blalalllvldflfdslzflfelsf',
+    description:  'Le barbecue électrique - appelé aussi Grill électrique - est idéal pour être utilisé en extérieur lors d’une belle journée ensoleillée ou en intérieur lorsque le temps ne s’y prête pas. Pour gagner de la place sur la table du repas, choisissez un modèle sur pieds. À vous les brochettes épicées, les poissons grillés et les cuisses de poulet dorées, les amateurs de grillades conviviales vont se régaler. ',
     category:     'Electrique',
     price:        790,
     location:     'Lille',
