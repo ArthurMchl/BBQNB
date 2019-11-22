@@ -152,8 +152,8 @@ puts '---- Seed model Rental (8 instances) ----'
 
 rental_mv_pr1 = Rental.create(
 
-    start_date:       Time.new(2017, 01, 31, 2, 2, 2, "+02:00"),
-    end_date:         Time.new(2019, 12, 31, 2, 2, 2, "+02:00"),
+    start_date:       Time.new(2019, 11, 17, 2, 2, 2, "+02:00"),
+    end_date:         Time.new(2019, 11, 26, 2, 2, 2, "+02:00"),
     barbecue_id:      barbecue_mick_un.id,
     user_id:          pierre.id
 )
@@ -161,7 +161,7 @@ rental_mv_pr1 = Rental.create(
 rental_mv_pr2 = Rental.create(
 
     start_date:       Time.now,
-    end_date:         Time.new(2020, 01, 31, 2, 2, 2, "+02:00"),
+    end_date:         Time.new(2019, 11, 31, 2, 2, 2, "+02:00"),
     barbecue_id:      barbecue_pierre_un.id,
     user_id:          micka.id
 )
@@ -170,7 +170,7 @@ rental_mv_pr2 = Rental.create(
 rental_art_wnr1 = Rental.create(
 
     start_date:       Time.now,
-    end_date:         Time.new(2020, 12, 02, 2, 2, 2, "+02:00"),
+    end_date:         Time.new(2019, 11, 27, 2, 2, 2, "+02:00"),
     barbecue_id:      barbecue_arthur_un.id,
     user_id:          werner.id
 )
@@ -178,7 +178,7 @@ rental_art_wnr1 = Rental.create(
 rental_art_wnr2 = Rental.create(
 
     start_date:       Time.now,
-    end_date:         Time.new(2020, 05, 31, 2, 2, 2, "+02:00"),
+    end_date:         Time.new(2019, 12, 15, 2, 2, 2, "+02:00"),
     barbecue_id:      barbecue_werner_un.id,
     user_id:          arthur.id
 )
@@ -186,7 +186,7 @@ rental_art_wnr2 = Rental.create(
 
 rental_mv_art1 = Rental.create(
 
-    start_date:       Time.new(2019, 01, 31, 2, 2, 2, "+02:00"),
+    start_date:       Time.new(2019, 11, 05, 2, 2, 2, "+02:00"),
     end_date:         Time.new(2019, 12, 31, 2, 2, 2, "+02:00"),
     barbecue_id:      barbecue_mick_deux.id,
     user_id:          arthur.id
@@ -195,7 +195,7 @@ rental_mv_art1 = Rental.create(
 rental_mv_art2 = Rental.create(
 
     start_date:       Time.now,
-    end_date:         Time.new(2019, 12, 31, 2, 2, 2, "+02:00"),
+    end_date:         Time.new(2019, 12, 01, 2, 2, 2, "+02:00"),
     barbecue_id:      barbecue_arthur_deux.id,
     user_id:          micka.id
 )
@@ -204,14 +204,14 @@ rental_mv_art2 = Rental.create(
 rental_wnr_pr1 = Rental.create(
 
     start_date:       Time.now,
-    end_date:         Time.new(2020, 01, 31, 2, 2, 2, "+02:00"),
+    end_date:         Time.new(2019, 11, 25, 2, 2, 2, "+02:00"),
     barbecue_id:      barbecue_pierre_deux.id,
     user_id:          werner.id
 )
 
 rental_wnr_pr2 = Rental.create(
-  start_date:       Time.new(2020, 01, 31, 2, 2, 2, "+02:00"),
-  end_date:         Time.new(2021, 01, 31, 2, 2, 2, "+02:00"),
+  start_date:       Time.new(2019, 11, 05, 2, 2, 2, "+02:00"),
+  end_date:         Time.new(2019, 11, 31, 2, 2, 2, "+02:00"),
   barbecue_id:      barbecue_werner_deux.id,
   user_id:          pierre.id
 
