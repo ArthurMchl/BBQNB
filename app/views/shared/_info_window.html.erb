@@ -1,4 +1,7 @@
-<%= link_to barbecue_path(barbecue) do %>
-<p><%= barbecue.name %></p>
-<p><%= barbecue.price %> €</p>
-<% end %>
+  <%= link_to barbecue_path(barbecue) do %>
+<div id="info-window">
+  <p><%= barbecue.name %></p>
+  <p><%= barbecue.category %></p>
+  <p><%= barbecue.price %>€ / j </p>
+</div>
+  <% end %>

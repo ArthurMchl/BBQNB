@@ -1,9 +1,6 @@
 <div class="container" >
   <h1 class="location">Félicitations !</h1>
-  <p class="location">Votre reservation a bien été effectuée du <strong><%= parse_date_fr(@rental.start_date)%></strong> au<strong> <%= parse_date_fr(@rental.end_date)%></strong></p>
-  <div class=btn1>
-  <%= link_to "Retour à mes annonces", profiles_dashboard_path, class: "btn" %>
-  </div>
+  <p class="location">Votre reservation a bien été effectuée du <strong><%= parse_date_fr(@rental.start_date)%></strong> au <strong> <%= parse_date_fr(@rental.end_date)%></strong> pour un total de <strong> <%= ((@rental.end_date - @rental.start_date).to_i) * @rental.barbecue.price %> € </strong> </p>
 <div class="container-bbq-show">
   <div class="container-card-bbq-details">
     <div class="card-bbq-show-name"><%= @rental.barbecue.name %> </div>
@@ -29,4 +26,7 @@
     </div>
   </div>
 </div>
+    <div class="btn1 mb-5">
+      <%= link_to "Retour à mes annonces", profiles_dashboard_path, class: "btn" %>
+    </div>
 </div>

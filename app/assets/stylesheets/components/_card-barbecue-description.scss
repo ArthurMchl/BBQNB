@@ -2,11 +2,12 @@
   display: flex;
   justify-content: space-evenly;
   margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-bottom: 4vh;
 }
 
 .container-card-bbq-show{
   margin: 64px 360px 64px 360px;
+  display: flex;
 }
 
 .card-bbq-show-name{
@@ -28,6 +29,8 @@
 #bbq-price{
   font-size: 24px;
   padding-top: 24px;
+
+  text-align: center;
   }
 
 .card-bbq-show-photo{
