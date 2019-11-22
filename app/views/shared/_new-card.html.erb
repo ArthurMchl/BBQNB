@@ -1,0 +1,34 @@
+<div class="card-container">
+  <div class="card-information">
+    <div class="card-description">
+      <h6> Type barbecue :</h6>
+      <h2> WEBER </h2>
+      <p class="mail"> mickael.verdin@numericable.fr <p>
+        <p class="descrition"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Quisquam quas quis dolores ad debitis ex corrupti impedit, reiciendis dignissimos
+        mollitia laborum eius quidem voluptatibus quo omnis tempora odio expedita. Atque! </p>
+      </div>
+      <div class="date-information">
+        <div class="img-fa">
+        <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div class="card-date">
+          <p class="gris">Disponible à partir du : </p>
+          <p><em> La dispo</em> </p>
+        </div>
+      </div>
+      <div class="price-information">
+        <div class="img-fa">
+        <i class="far fa-money-bill-alt"></i>
+         </div>
+        <div class="card-price">
+          <p class="gris">Prix à la journée</p>
+          <p><em><%= @barbecue.price %></em></p>
+        </div>
+      </div>
+    </div>
+    <div class="photo">
+      <%= cl_image_tag "http://gallery.tranchesdunet.com/barbecue-originaux/barbecue_06-plateau-design-630x510.jpg" ,height: 700, width: 800, class: "card-photo" %>
+    </div>
+  </div>
+</div>

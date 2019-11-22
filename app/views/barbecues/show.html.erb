@@ -1,38 +1,28 @@
 <div class="container-bbq-show">
-  <div class="container-card-bbq-details">
-    <div class="card-bbq-show-name">
-      <%= @barbecue.name %>
-    </div>
-    <div class="card-bbq-show-details">
-
-      <div class="card-bbq-show-photo">
-        <%= cl_image_tag @barbecue.photo, height: 320, width: 380, crop: :fill %>
+  <div class="card-container">
+  <div class="card-information">
+    <div class="card-description">
+      <h6> Type barbecue : <%= @barbecue.category %></h6>
+      <h2> <%= @barbecue.name %> </h2>
+      <p class="mail"> <%= @barbecue.user.email %> <p>
+        <p class="descrition"> <%= @barbecue.description %> </p>
       </div>
-      <div class="card-bbq-show-information">
-        <div class="card-bbq-show-text">
-          <li class="bbq-text">Disponible à <strong><%= @barbecue.location %></strong> </li>
-          <li class="bbq-text">Utilisation: <strong><%= @barbecue.category %></strong> </li>
-          <li class="bbq-text"><strong>Description:</strong> <%= @barbecue.description %> </li>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, ut praesentium nulla obcaecati iusto rem consectetur sed tempore ad, adipisci ducimus? Debitis commodi, asperiores quos, nam eum enim architecto amet.</p>
+      <div class="price-information">
+        <div class="img-fa">
+        <i class="far fa-money-bill-alt"></i>
+         </div>
+        <div class="card-price">
+          <p class="gris">Prix à la journée</p>
+          <p><em><%= @barbecue.price %>.00€</em></p>
         </div>
       </div>
     </div>
-    <div class="bbq-reviews">
-      <% @barbecue.reviews.each do |review| %>
-        <li>
-          <strong>Note: </strong>
-          <% review.rating.times do %>
-            <i class="fas fa-star font-color-red"></i>
-          <% end %>
-          <% (5 - review.rating).times do %>
-            <i class="far fa-star font-color-red"></i>
-          <% end %>
+    <div class="photo">
+      <%= cl_image_tag "http://gallery.tranchesdunet.com/barbecue-originaux/barbecue_06-plateau-design-630x510.jpg" ,height: 400, width: 350, class: "card-photo" %>
 
-        </li>
-        <li class="bbq-text"><strong>Review: </strong><%= review.content%></li>
-      <% end %>
     </div>
   </div>
+
 
   <div class="booking-details">
     <% if @barbecue.user == current_user %>
