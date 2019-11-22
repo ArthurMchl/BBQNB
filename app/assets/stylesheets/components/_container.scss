@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: grey;
 }
 
 .registration-container{
@@ -21,6 +21,8 @@ body {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
+  margin-left: 300px;
+  margin-right: 350px;
 }
 
 .post-announce img{
@@ -28,3 +30,6 @@ body {
   border-radius: 28px;
 }
 
+.tva {
+text-align: center;
+}
