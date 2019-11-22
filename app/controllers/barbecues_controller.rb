@@ -9,7 +9,9 @@ class BarbecuesController < ApplicationController
     @markers = @barbecues_mapped.map do |barbecue|
       {
         lat: barbecue.latitude,
-        lng: barbecue.longitude
+        lng: barbecue.longitude,
+        infoWindow: render_to_string(partial: "shared/info_window", locals: { barbecue: barbecue }),
+        image_url: helpers.asset_url('bbq.png')
       }
     end
   end
@@ -41,9 +43,11 @@ class BarbecuesController < ApplicationController
   end
 
   def edit
+    @barbecue = set_id
   end
 
   def update
+    @barbecue.update(barbecue_params)
   end
 
   def destroy
@@ -52,10 +56,11 @@ class BarbecuesController < ApplicationController
     redirect_to barbecues_path
   end
 
+
   private
 
   def barbecue_params
-    params.require(:barbecue).permit(:name, :category, :description, :price, :location, :photo, :title,)
+    params.require(:barbecue).permit(:name, :category, :description, :price, :location, :photo, :title)
   end
 
   def set_id
