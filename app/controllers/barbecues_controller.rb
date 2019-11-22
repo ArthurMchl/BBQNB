@@ -9,7 +9,9 @@ class BarbecuesController < ApplicationController
     @markers = @barbecues_mapped.map do |barbecue|
       {
         lat: barbecue.latitude,
-        lng: barbecue.longitude
+        lng: barbecue.longitude,
+        infoWindow: render_to_string(partial: "shared/info_window", locals: { barbecue: barbecue }),
+        image_url: helpers.asset_url('bbq.png')
       }
     end
   end
