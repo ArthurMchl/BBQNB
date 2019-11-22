@@ -1,7 +1,10 @@
-  <div class="card-trip">
+  <div class="card-trip car-trip-rental ">
        <%= cl_image_tag rental.barbecue.photo, height: 500, width: 450, crop: :fill %>
-    <div class="card-trip-infos">
+    <div class="card-trip-infos card-trip-infos-rental" id ="jolie">
       <strong><%=rental.barbecue.name%></strong>
       Du <%=parse_date_fr(rental.start_date)%> au <%=parse_date_fr(rental.end_date)%>
       </div>
+             <div class="btn btn-avis">
+            <%= link_to "Ajouter un avis", new_barbecue_review_path(rental.barbecue)%>
+          </div>
   </div>
