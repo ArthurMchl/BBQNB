@@ -1,6 +1,12 @@
+.container-bbq-show{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
 .container-card-bbq-show{
   margin: 64px 360px 64px 360px;
-  border: 1px solid black;
 }
 
 .card-bbq-show-name{
@@ -11,6 +17,7 @@
   border-bottom: 1px solid black;
   font-size: 36px;
   font-weight: bold;
+  margin: 0px 8px;
 }
 
 .card-bbq-show-details{
@@ -19,11 +26,8 @@
 }
 
 #bbq-price{
-  list-style: none;
   font-size: 24px;
-  text-align: center;
-  width: 28%;
-  padding-top: 32px;
+  padding-top: 24px;
   }
 
 .card-bbq-show-photo{
@@ -37,18 +41,20 @@
 }
 
 .card-bbq-show-text{
-  display: flex;
   padding: 16px 16px 0px 16px;
   text-align: justify;
-}
-
-.bbq-basics{
   list-style: none;
+  width: 320px;
+  height: 350px;
+  overflow: auto;
+  margin: 8px;
 }
 
 .bbq-text{
-  margin: 8px 2px 8px 2px;
+  margin: 8px;
   border-bottom: 1px solid black;
+  list-style: none;
+
 }
 
 .submit-bbq{
@@ -90,5 +96,19 @@
 
 #new-rental-details{
   display: flex;
-  padding: 0px 16px;
+  justify-content: space-evenly;
+  padding: 8px 0px;
+}
+
+.container-card-bbq-details{
+  border: 2px solid black;
+  background: white;
+  border-radius: 16px;
+}
+
+.booking-details{
+}
+
+.bbq-reviews{
+  list-style: none;
 }

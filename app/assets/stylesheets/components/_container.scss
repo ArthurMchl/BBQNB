@@ -3,15 +3,28 @@ body {
 }
 
 .registration-container{
-  margin: 40px 800px 40px 80px;
+  width: 1000px;
   border: 1px solid;
   border-color: black;
   border-radius: 28px;
   padding: 40px;
   font-weight: lighter;
   background: transparent;
+  width: 500px;
 }
 
 .registration-container h1 {
   font-family: 'Roboto', sans-serif;
 }
+
+.post-announce {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.post-announce img{
+  height: 100%;
+  border-radius: 28px;
+}
+

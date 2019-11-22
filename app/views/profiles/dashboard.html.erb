@@ -5,13 +5,17 @@
       <% @rentals.each do |rental| %>
         <div class="col-sm-12 col-md-4">
           <%= render "shared/card_rentals", rental: rental %>
+          <div class="d-flex">
+            <%= link_to "Ajouter un avis", new_barbecue_review_path(rental.barbecue), class: "addreview"%>
+          </div>
         </div>
+
       <% end %>
     </div>
   </div>
 </div>
 
-<h1>Mes barbecues</h1>
+<h1>Mes annonces</h1>
 
   <div class="container">
     <div class="row">
