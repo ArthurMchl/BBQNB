@@ -3,7 +3,6 @@
   background: white;
   border-bottom: 1px solid;
   border-color: black;
-
 }
 
 
@@ -74,4 +73,24 @@
 .card-trip .card-trip-infos a {
   font-size: 15px;
   color: red;
+}
+
+.btn-avis {
+  width: 100%;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.card-trip-infos-rental {
+  height: 72px;
+}
+
+.car-trip-rental {
+margin-bottom: 10px;
+  border-bottom: 0px;
+}
+
+#jolie {
+     flex-direction: column;
+    align-items:center;
 }
