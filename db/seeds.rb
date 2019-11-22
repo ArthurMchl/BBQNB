@@ -1,4 +1,5 @@
 puts '---- Delete all items in database ----'
+Review.destroy_all
 Rental.destroy_all
 Barbecue.destroy_all
 User.destroy_all

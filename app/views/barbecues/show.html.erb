@@ -36,7 +36,13 @@
 
   <div class="booking-details">
     <% if @barbecue.user == current_user %>
-      <%= link_to "Je supprime", @barbecue, class: "btn-ghost", method: :delete %>
+      <%= link_to "Supprimer", @barbecue, class: "btn-ghost", method: :delete %>
+      <%= link_to "Modifier", edit_barbecue_path(@barbecue), class: "btn-ghost" %>
+       <div id="bbq-price">
+              <p class="price">
+                <%= @barbecue.price %> €
+              </p>
+        </div>
     <% else %>
       <div id="rental-form" data-rentals="<%= @dates_rentals.to_json %>">
         <%= simple_form_for [@barbecue, @rental] do |f| %>
