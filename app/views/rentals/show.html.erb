@@ -1,7 +1,9 @@
-<div class="container" style="height: calc(100vh - 80px - 64px)">
-  <h1>Félicitations !</h1>
-  <p>Votre reservation a bien été effectuée du <strong><%= parse_date_fr(@rental.start_date)%> au <%= parse_date_fr(@rental.end_date)%></strong></p>
-  <%= link_to "Voir mes annonces", profiles_dashboard_path, class: "addreview" %>
+<div class="container" >
+  <h1 class="location">Félicitations !</h1>
+  <p class="location">Votre reservation a bien été effectuée du <strong><%= parse_date_fr(@rental.start_date)%></strong> au<strong> <%= parse_date_fr(@rental.end_date)%></strong></p>
+  <div class=btn1>
+  <%= link_to "Retour à mes annonces", profiles_dashboard_path, class: "btn" %>
+  </div>
 <div class="container-bbq-show">
   <div class="container-card-bbq-details">
     <div class="card-bbq-show-name"><%= @rental.barbecue.name %> </div>
@@ -26,4 +28,5 @@
       <% end %>
     </div>
   </div>
+</div>
 </div>

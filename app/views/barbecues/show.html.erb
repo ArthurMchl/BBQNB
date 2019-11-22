@@ -32,6 +32,8 @@
           <li class="bbq-text"><strong>Review: </strong><%= review.content%></li>
           <% end %>
         </div>
+        <div class="card-rating">
+        </div>
       </div>
       <div class="photo">
         <%= cl_image_tag @barbecue.photo ,height: 400, width: 350, class: "card-photo" %>
@@ -69,6 +71,7 @@
       <% else %>
       <div id="rental-form" data-rentals="<%= @dates_rentals.to_json %>">
         <%= simple_form_for [@barbecue, @rental] do |f| %>
+
         <%= f.input  :start_date, as: :string, label: "Dates de location", required: false, input_html: {id: "range_start", class: "d-none"} %>
         <%= f.input  :end_date,   as: :string, label: false, required: false, input_html: {id: "range_end" , class: "d-none"} %>
         <div id="new-rental-details">
@@ -81,14 +84,11 @@
             </div>
           </div>
         </div>
-
         <% end %>
       </div>
       <% end %>
     </div>
   </div>
 </div>
-</div>
-
 
 
