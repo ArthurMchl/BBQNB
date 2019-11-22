@@ -1,45 +1,53 @@
 <div class="container-bbq-show">
-  <div class="container-card-bbq-details">
-    <div class="card-bbq-show-name"><%= @barbecue.name %> </div>
-    <div class="card-bbq-show-details">
-
-      <div class="card-bbq-show-photo">
-        <%= cl_image_tag @barbecue.photo, height: 320, width: 380, crop: :fill %>
+  <div class="card-container">
+  <div class="card-information">
+    <div class="card-description">
+      <h6> Type barbecue : <%= @barbecue.category %></h6>
+      <h2> <%= @barbecue.name %> </h2>
+      <p class="mail"> <%= @barbecue.user.email %> <p>
+        <p class="descrition"> <%= @barbecue.description %> </p>
       </div>
-      <div class="card-bbq-show-information">
-        <div class="card-bbq-show-text">
-            <li class="bbq-text">Disponible à <strong><%= @barbecue.location %></strong> </li>
-            <li class="bbq-text">Utilisation: <strong><%= @barbecue.category %></strong> </li>
-            <li class="bbq-text"><strong>Description:</strong> <%= @barbecue.description %> </li>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, ut praesentium nulla obcaecati iusto rem consectetur sed tempore ad, adipisci ducimus? Debitis commodi, asperiores quos, nam eum enim architecto amet.</p>
+      <div class="price-information">
+        <div class="img-fa">
+        <i class="far fa-money-bill-alt"></i>
+         </div>
+        <div class="card-price">
+          <p class="gris">Prix à la journée</p>
+          <p><em><%= @barbecue.price %>.00€</em></p>
         </div>
       </div>
     </div>
-    <div class="bbq-reviews">
-      <% @barbecue.reviews.each do |review| %>
-        <li><strong>Note: </strong><%= review.rating %></li>
-        <li class="bbq-text"><strong>Review: </strong><%= review.content%></li>
-      <% end %>
+    <div class="photo">
+      <%= cl_image_tag "http://gallery.tranchesdunet.com/barbecue-originaux/barbecue_06-plateau-design-630x510.jpg" ,height: 400, width: 350, class: "card-photo" %>
+
     </div>
   </div>
 
+
   <div class="booking-details">
-    <div id="rental-form" data-rentals="<%= @dates_rentals.to_json %>">
-      <%= simple_form_for [@barbecue, @rental] do |f| %>
-        <%= f.input  :start_date, as: :string, label: "Dates de location", required: false, input_html: {id: "range_start", class: "d-none"} %>
-        <%= f.input  :end_date,   as: :string, label: false, required: false, input_html: {id: "range_end" , class: "d-none"} %>
-     </div>
-    <div id="new-rental-details">
-      <div id="bbq-price">
-     <p id="price" data-unitPrice="<%= @barbecue.price %>"> <%= @barbecue.price %> € </p>
-        <div class="btn-ghost submit-bbq">
-        <% if @barbecue.user == current_user %>
-        <%= link_to "Je supprime",@barbecue, method: :delete %>
-        <% else %>
-        <%= f.button :submit, "Je réserve ! !" %>
+    <% if @barbecue.user == current_user %>
+      <%= link_to "Supprimer", @barbecue, class: "btn", method: :delete %>
+      <%= link_to "Modifier", edit_barbecue_path(@barbecue), class: "btn" %>
+       <div id="bbq-price">
+              <p class="price">
+                <%= @barbecue.price %> €
+              </p>
+        </div>
+    <% else %>
+      <div id="rental-form" data-rentals="<%= @dates_rentals.to_json %>">
+        <%= simple_form_for [@barbecue, @rental] do |f| %>
+          <%= f.input  :start_date, as: :string, label: "Dates de location", required: false, input_html: {id: "range_start", class: "d-none"} %>
+          <%= f.input  :end_date,   as: :string, label: false, required: false, input_html: {id: "range_end" , class: "d-none"} %>
+          <div id="new-rental-details">
+            <div id="bbq-price">
+              <p id="price" data-unitPrice="<%= @barbecue.price %>"> <%= @barbecue.price %> € </p>
+              <div class="btn">
+                <%= f.button :submit, "Je réserve ! !" %>
+              </div>
+            </div>
+          </div>
         <% end %>
       </div>
-
         <% end %>
       </div>
     </div>

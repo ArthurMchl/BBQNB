@@ -47,7 +47,13 @@ class BarbecuesController < ApplicationController
   end
 
   def update
+    @barbecue = set_id
     @barbecue.update(barbecue_params)
+    if @barbecue.save
+      redirect_to barbecue_path(@barbecue)
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -55,7 +61,6 @@ class BarbecuesController < ApplicationController
     @barbecue.destroy
     redirect_to barbecues_path
   end
-
 
   private
 
