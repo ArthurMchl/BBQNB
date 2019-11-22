@@ -1,6 +1,8 @@
 <div class="container-bbq-show">
   <div class="container-card-bbq-details">
-    <div class="card-bbq-show-name"><%= @barbecue.name %> </div>
+    <div class="card-bbq-show-name">
+      <%= @barbecue.name %>
+    </div>
     <div class="card-bbq-show-details">
 
       <div class="card-bbq-show-photo">
@@ -8,16 +10,25 @@
       </div>
       <div class="card-bbq-show-information">
         <div class="card-bbq-show-text">
-            <li class="bbq-text">Disponible à <strong><%= @barbecue.location %></strong> </li>
-            <li class="bbq-text">Utilisation: <strong><%= @barbecue.category %></strong> </li>
-            <li class="bbq-text"><strong>Description:</strong> <%= @barbecue.description %> </li>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, ut praesentium nulla obcaecati iusto rem consectetur sed tempore ad, adipisci ducimus? Debitis commodi, asperiores quos, nam eum enim architecto amet.</p>
+          <li class="bbq-text">Disponible à <strong><%= @barbecue.location %></strong> </li>
+          <li class="bbq-text">Utilisation: <strong><%= @barbecue.category %></strong> </li>
+          <li class="bbq-text"><strong>Description:</strong> <%= @barbecue.description %> </li>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, ut praesentium nulla obcaecati iusto rem consectetur sed tempore ad, adipisci ducimus? Debitis commodi, asperiores quos, nam eum enim architecto amet.</p>
         </div>
       </div>
     </div>
     <div class="bbq-reviews">
       <% @barbecue.reviews.each do |review| %>
-        <li><strong>Note: </strong><%= review.rating %></li>
+        <li>
+          <strong>Note: </strong>
+          <% review.rating.times do %>
+            <i class="fas fa-star font-color-red"></i>
+          <% end %>
+          <% (5 - review.rating).times do %>
+            <i class="far fa-star font-color-red"></i>
+          <% end %>
+
+        </li>
         <li class="bbq-text"><strong>Review: </strong><%= review.content%></li>
       <% end %>
     </div>
@@ -40,7 +51,6 @@
         <%= f.button :submit, "Je réserve!" %>
         <% end %>
       </div>
-
         <% end %>
       </div>
     </div>
