@@ -148,6 +148,4 @@ puts '---- Seed model Barbecue "ok" ---'
 
 puts '---- Seed model Rental (8 instances) ----'
 
-
-
 puts '---- Seed model Rental "ok" ---'
