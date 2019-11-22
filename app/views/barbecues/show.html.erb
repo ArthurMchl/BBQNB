@@ -1,4 +1,5 @@
 <div class="container-bbq-show">
+
   <div class="card-container">
     <div class="card-information">
       <div class="card-description">
@@ -16,12 +17,28 @@
             <p><em><%= @barbecue.price %>.00€</em></p>
           </div>
         </div>
+        <div class="bbq-reviews">
+          <% @barbecue.reviews.each do |review| %>
+          <li>
+            <strong>Note: </strong>
+            <% review.rating.times do %>
+            <i class="fas fa-star font-color-red"></i>
+            <% end %>
+            <% (5 - review.rating).times do %>
+            <i class="far fa-star font-color-red"></i>
+            <% end %>
+
+          </li>
+          <li class="bbq-text"><strong>Review: </strong><%= review.content%></li>
+          <% end %>
+        </div>
+        <div class="card-rating">
+        </div>
       </div>
       <div class="photo">
-        <%= cl_image_tag "http://gallery.tranchesdunet.com/barbecue-originaux/barbecue_06-plateau-design-630x510.jpg" ,height: 400, width: 350, class: "card-photo" %>
+        <%= cl_image_tag @barbecue.photo ,height: 400, width: 350, class: "card-photo" %>
       </div>
     </div>
-
 
     <div class="booking-details">
       <% if @barbecue.user == current_user %>
