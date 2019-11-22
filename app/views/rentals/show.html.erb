@@ -1,8 +1,29 @@
 <div class="container" style="height: calc(100vh - 80px - 64px)">
   <h1>Félicitations !</h1>
-  <p>Votre reservation a bien été effectuée du <%= parse_date_fr(@rental.start_date)%> au <%= parse_date_fr(@rental.end_date)%></p>
+  <p>Votre reservation a bien été effectuée du <strong><%= parse_date_fr(@rental.start_date)%> au <%= parse_date_fr(@rental.end_date)%></strong></p>
   <%= link_to "Voir mes annonces", profiles_dashboard_path, class: "addreview" %>
+<div class="container-bbq-show">
+  <div class="container-card-bbq-details">
+    <div class="card-bbq-show-name"><%= @rental.barbecue.name %> </div>
+    <div class="card-bbq-show-details">
+
+      <div class="card-bbq-show-photo">
+        <%= cl_image_tag @rental.barbecue.photo, height: 320, width: 380, crop: :fill %>
+      </div>
+      <div class="card-bbq-show-information">
+        <div class="card-bbq-show-text">
+            <li class="bbq-text">Disponible à <strong><%= @rental.barbecue.location %></strong> </li>
+            <li class="bbq-text">Utilisation: <strong><%= @rental.barbecue.category %></strong> </li>
+            <li class="bbq-text"><strong>Description:</strong> <%= @rental.barbecue.description %> </li>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, ut praesentium nulla obcaecati iusto rem consectetur sed tempore ad, adipisci ducimus? Debitis commodi, asperiores quos, nam eum enim architecto amet.</p>
+        </div>
+      </div>
+    </div>
+    <div class="bbq-reviews">
+      <% @rental.barbecue.reviews.each do |review| %>
+        <li><strong>Note: </strong><%= review.rating %></li>
+        <li class="bbq-text"><strong>Review: </strong><%= review.content%></li>
+      <% end %>
+    </div>
+  </div>
 </div>
-
-
-

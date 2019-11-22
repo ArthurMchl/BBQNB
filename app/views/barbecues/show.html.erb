@@ -36,8 +36,8 @@
 
   <div class="booking-details">
     <% if @barbecue.user == current_user %>
-      <%= link_to "Supprimer", @barbecue, class: "btn-ghost", method: :delete %>
-      <%= link_to "Modifier", edit_barbecue_path(@barbecue), class: "btn-ghost" %>
+      <%= link_to "Supprimer", @barbecue, class: "btn", method: :delete %>
+      <%= link_to "Modifier", edit_barbecue_path(@barbecue), class: "btn" %>
        <div id="bbq-price">
               <p class="price">
                 <%= @barbecue.price %> €
@@ -51,15 +51,18 @@
           <div id="new-rental-details">
             <div id="bbq-price">
               <p class="price">
-                <%= @barbecue.price %> €
+                <%= @barbecue.price %> € par jour
               </p>
-              <div class="btn-ghost submit-bbq">
+              <div class="btn">
                 <%= f.button :submit, "Je réserve ! !" %>
               </div>
             </div>
           </div>
+
         <% end %>
       </div>
-    <% end %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
