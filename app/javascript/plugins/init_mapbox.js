@@ -14,13 +14,21 @@ const initMapbox = () => {
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/werndev/ck38kuf9b01kq1cpkz3mieeaw'
+      style: 'mapbox://styles/werndev/ck38y2yg642jv1cmueh8jjk18'
     });
     const markers = JSON.parse(mapElement.dataset.markers);
     markers.forEach((marker) => {
-      new mapboxgl.Marker()
-        .setLngLat([ marker.lng, marker.lat ])
-        .addTo(map);
+        const element = document.createElement('div');
+        element.className = 'marker';
+        element.style.backgroundImage = `url('${marker.image_url}')`;
+        element.style.backgroundSize = 'contain';
+        element.style.width = '48px';
+        element.style.height = '48px';
+    const popup = new mapboxgl.Popup().setHTML(marker.infoWindow); // add this
+      new mapboxgl.Marker(element)
+      .setLngLat([marker.lng, marker.lat])
+      .setPopup(popup)
+      .addTo(map);
     });
   fitMapToMarkers(map, markers);
   }

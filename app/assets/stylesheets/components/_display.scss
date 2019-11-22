@@ -9,9 +9,17 @@
 .display-background {
   background-color: white;
   background-size: cover;
+  display: flex;
 }
 
 a:hover {
   text-decoration: none;
   color: black;
+}
+
+#map{
+  width: 48%;
+  height: calc(100vh - 80px);
+  position: sticky;
+  top: 80px;
 }
