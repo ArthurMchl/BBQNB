@@ -10,7 +10,7 @@ class RentalsController < ApplicationController
     @rental.barbecue = @barbecue
     @rental.user = current_user
     if @rental.save
-      redirect_to profiles_dashboard_path
+      redirect_to rental_path(@rental)
     else
       redirect_to barbecue_path(@barbecue)
     end
