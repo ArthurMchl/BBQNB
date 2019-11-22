@@ -31,12 +31,13 @@
      </div>
     <div id="new-rental-details">
       <div id="bbq-price">
-     <p class="price">   <%= @barbecue.price %> € </p>
-        <div class="btn-ghost submit-bbq">
+     <p class="price">   <%= @barbecue.price %> € par jour </p>
+     <h5 class =tva>TVA comprise</h5>
+        <div class="btn">
         <% if @barbecue.user == current_user %>
-        <%= link_to "Je supprime",@barbecue, method: :delete %>
+        <%= link_to "Je supprime",@barbecue, method: :delete, class: "btn"%>
         <% else %>
-        <%= f.button :submit, "Je réserve ! !" %>
+        <%= f.button :submit, "Je réserve!" %>
         <% end %>
       </div>
 
