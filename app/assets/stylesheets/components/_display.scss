@@ -7,11 +7,20 @@
 }
 
 .display-background {
-  background-color: white;
+  background-color: f7f4ef;
   background-size: cover;
+  display: flex;
 }
 
 a:hover {
   text-decoration: none;
-  color: black;
+  opacity: 0.6;
 }
+
+#map{
+  width: 48%;
+  height: calc(100vh - 80px);
+  position: sticky;
+  top: 80px;
+}
+

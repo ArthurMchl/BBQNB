@@ -1,12 +1,10 @@
 <div class="display-background">
-  <h1 class ="display-title">
-    <% if params[:query].present?  %>
-      Barbecues disponibles sur <%= params[:query].downcase.capitalize %>
-    <% end %>
-  </h1>
-
-
   <div class="container">
+    <h1 class ="display-title">
+      <% if params[:query].present?  %>
+        Barbecues disponibles sur <%= params[:query].downcase.capitalize %>
+      <% end %>
+    </h1>
     <div class="row">
       <% @barbecues.each do |barbecue| %>
         <div class="col-sm-12 col-md-4">
@@ -15,7 +13,13 @@
       <% end %>
     </div>
   </div>
+  <div
+    id="map"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="pk.eyJ1Ijoid2VybmRldiIsImEiOiJjazJnODkyNGowbjdnM2hwNXhpMzI1MmZ2In0.LPiWh1iQx0lgYsuk-B8QTg">
+  </div>
 </div>
+
 
 
 <div
@@ -25,4 +29,3 @@
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="pk.eyJ1Ijoid2VybmRldiIsImEiOiJjazJnODkyNGowbjdnM2hwNXhpMzI1MmZ2In0.LPiWh1iQx0lgYsuk-B8QTg"
 ></div>
-
